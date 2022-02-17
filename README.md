@@ -1,2 +1,2 @@
 # sbom-on-pull-request
-Generate SBOM manifests on PRs :D
+Generate SBOM manifests on PRs 😁
