@@ -39,25 +39,6 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./.gitignore",
-      "SPDXID": "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9842f442b12e86b03acd67cd83923f4ffa95fb72f546b6c13ef2269d770f57e7"
-        },
-        {
-          "algorithm": "SHA1",
-          "checksumValue": "7c7c92f87cbbad24b6a64b191257eae0d82e6597"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "licenseInfoInFiles": [
-        "NOASSERTION"
-      ],
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./scratch.sh",
       "SPDXID": "SPDXRef-File--scratch.sh-AAC11151E1A914674FDFC419D47268F95F10015B",
       "checksums": [
@@ -77,16 +58,16 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./azure-pipelines.yml",
-      "SPDXID": "SPDXRef-File--azure-pipelines.yml-EA474BC52D69C596A2F8E04332CF2B4A830B48D5",
+      "fileName": "./.gitignore",
+      "SPDXID": "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "c3fcf55a73fa233b32727f9191b1051a27083f14fe79393b67c5dcf6fca1673e"
+          "checksumValue": "9842f442b12e86b03acd67cd83923f4ffa95fb72f546b6c13ef2269d770f57e7"
         },
         {
           "algorithm": "SHA1",
-          "checksumValue": "ea474bc52d69c596a2f8e04332cf2b4a830b48d5"
+          "checksumValue": "7c7c92f87cbbad24b6a64b191257eae0d82e6597"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -106,6 +87,25 @@
         {
           "algorithm": "SHA1",
           "checksumValue": "12e895690cda63432583117b08f42c4abe25882d"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./azure-pipelines.yml",
+      "SPDXID": "SPDXRef-File--azure-pipelines.yml-EA474BC52D69C596A2F8E04332CF2B4A830B48D5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "c3fcf55a73fa233b32727f9191b1051a27083f14fe79393b67c5dcf6fca1673e"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "ea474bc52d69c596a2f8e04332cf2b4a830b48d5"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -154,10 +154,10 @@
       "versionInfo": "0.0.1",
       "supplier": "Organization: Microsoft",
       "hasFiles": [
-        "SPDXRef-File--azure-pipelines.yml-EA474BC52D69C596A2F8E04332CF2B4A830B48D5",
+        "SPDXRef-File--generate-sbom.yml-12E895690CDA63432583117B08F42C4ABE25882D",
         "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
         "SPDXRef-File--README.md-28B3DF1C2F3AC2280D932699586AC73B57763350",
-        "SPDXRef-File--generate-sbom.yml-12E895690CDA63432583117B08F42C4ABE25882D",
+        "SPDXRef-File--azure-pipelines.yml-EA474BC52D69C596A2F8E04332CF2B4A830B48D5",
         "SPDXRef-File--scratch.sh-AAC11151E1A914674FDFC419D47268F95F10015B",
         "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899"
       ]
@@ -179,9 +179,9 @@
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "glennmusa-sbom-on-pull-request 0.0.1",
-  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8504/q6bGLMBaFU2soCOnURalTw",
+  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8505/750teNN9ik60tzD-SmMc4Q",
   "creationInfo": {
-    "created": "2022-02-17T19:17:52Z",
+    "created": "2022-02-17T19:18:46Z",
     "creators": [
       "Organization: Microsoft",
       "Tool: Microsoft.SBOMTool-2.1.14"
