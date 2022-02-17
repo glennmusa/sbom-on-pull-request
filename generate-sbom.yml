@@ -27,19 +27,19 @@ jobs:
         _manifest/spdx_2.2/manifest.spdx.json.sha256
       )
 
-      the_last_log=( $(git log --max-count=1 --oneline --name-only --pretty="") )
+      the_last_diff=( $(git diff --name-only --pretty="" HEAD~1 HEAD) )
 
       echo "only manifest files:"
       echo ${only_manifest_files[*]}
       echo ""
 
-      echo "the last git log:"
-      echo ${the_last_log[*]}
+      echo "the last git diff:"
+      echo ${the_last_diff[*]}
       echo ""
 
       BUILD_SBOM=true
 
-      if [[ "${the_last_log[*]}" == "${only_manifest_files[*]}" ]]; then
+      if [[ "${the_last_diff[*]}" == "${only_manifest_files[*]}" ]]; then
           BUILD_SBOM=false
           echo "These changes are just the manifest files."
       fi
