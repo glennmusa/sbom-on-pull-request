@@ -47,7 +47,7 @@ jobs:
       echo ${the_last_diff[*]}
       echo ""
 
-      BUILD_SBOM=true
+      BUILD_SBOM=false
 
       if [[ "${the_last_diff[*]}" == "${only_manifest_files[*]}" ]]; then
           BUILD_SBOM=false
@@ -55,7 +55,7 @@ jobs:
       fi
 
       echo "##vso[task.setvariable variable=BUILD_SBOM;isOutput=true]$BUILD_SBOM"
-      echo "BUILD_SBOM is $(BUILD_SBOM)"
+      echo "BUILD_SBOM is $BUILD_SBOM"
     name: determineSbom
     displayName: 'Determine if SBOM needs to be built'
 
