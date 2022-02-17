@@ -1,25 +1,6 @@
 {
   "files": [
     {
-      "fileName": "./README.md",
-      "SPDXID": "SPDXRef-File--README.md-E8A5ED1A75DD8660C70DE0F6C3DBA5154580984F",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "f861dd321be4962224a8bc1df425e3fed5ee2d54b45e835a8147d0d6976e350c"
-        },
-        {
-          "algorithm": "SHA1",
-          "checksumValue": "e8a5ed1a75dd8660c70de0f6c3dba5154580984f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "licenseInfoInFiles": [
-        "NOASSERTION"
-      ],
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./LICENSE",
       "SPDXID": "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899",
       "checksums": [
@@ -39,35 +20,16 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./.gitignore",
-      "SPDXID": "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
+      "fileName": "./generate-sbom.yml",
+      "SPDXID": "SPDXRef-File--generate-sbom.yml-D25F1F6D90C4B31070CAE1044CDAAD24ACAA2FC6",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "9842f442b12e86b03acd67cd83923f4ffa95fb72f546b6c13ef2269d770f57e7"
+          "checksumValue": "e9b02d059351839041cf764fe1404d3a399a95759a2fcc264e0d612bd58ffaf9"
         },
         {
           "algorithm": "SHA1",
-          "checksumValue": "7c7c92f87cbbad24b6a64b191257eae0d82e6597"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "licenseInfoInFiles": [
-        "NOASSERTION"
-      ],
-      "copyrightText": "NOASSERTION"
-    },
-    {
-      "fileName": "./scratch.sh",
-      "SPDXID": "SPDXRef-File--scratch.sh-AAC11151E1A914674FDFC419D47268F95F10015B",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "57ed262dffa2a338d27df975c21ab98d3071d76d072723dce12c2839dc729e26"
-        },
-        {
-          "algorithm": "SHA1",
-          "checksumValue": "aac11151e1a914674fdfc419d47268f95f10015b"
+          "checksumValue": "d25f1f6d90c4b31070cae1044cdaad24acaa2fc6"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -96,16 +58,54 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./generate-sbom.yml",
-      "SPDXID": "SPDXRef-File--generate-sbom.yml-D336A9C3CFFD982696830F81441C01B1BF6913D9",
+      "fileName": "./scratch.sh",
+      "SPDXID": "SPDXRef-File--scratch.sh-AAC11151E1A914674FDFC419D47268F95F10015B",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ce3b591c0825981780b4952b6be89cbc54963abafe4fc06cce349e17d7802342"
+          "checksumValue": "57ed262dffa2a338d27df975c21ab98d3071d76d072723dce12c2839dc729e26"
         },
         {
           "algorithm": "SHA1",
-          "checksumValue": "d336a9c3cffd982696830f81441c01b1bf6913d9"
+          "checksumValue": "aac11151e1a914674fdfc419d47268f95f10015b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./README.md",
+      "SPDXID": "SPDXRef-File--README.md-AB12B269EEA341BE2212C850A69A54E8E3500909",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2de0221d44b13947eb30dc06a5822d0d06e6aedc7ecadb0ac6d5bfd0d18a9717"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "ab12b269eea341be2212c850a69a54e8e3500909"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./.gitignore",
+      "SPDXID": "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9842f442b12e86b03acd67cd83923f4ffa95fb72f546b6c13ef2269d770f57e7"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "7c7c92f87cbbad24b6a64b191257eae0d82e6597"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -142,7 +142,7 @@
       "SPDXID": "SPDXRef-RootPackage",
       "downloadLocation": "NOASSERTION",
       "packageVerificationCode": {
-        "packageVerificationCodeValue": "604c165dc30ae54945febf2fd01a0046ca069092"
+        "packageVerificationCodeValue": "7b7aa2fba5ea34fae2f47485f5b339f03bc237e9"
       },
       "filesAnalyzed": true,
       "licenseConcluded": "NOASSERTION",
@@ -154,12 +154,12 @@
       "versionInfo": "0.0.1",
       "supplier": "Organization: Microsoft",
       "hasFiles": [
-        "SPDXRef-File--generate-sbom.yml-D336A9C3CFFD982696830F81441C01B1BF6913D9",
-        "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
-        "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899",
         "SPDXRef-File--azure-pipelines.yml-EA474BC52D69C596A2F8E04332CF2B4A830B48D5",
+        "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899",
+        "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
+        "SPDXRef-File--README.md-AB12B269EEA341BE2212C850A69A54E8E3500909",
         "SPDXRef-File--scratch.sh-AAC11151E1A914674FDFC419D47268F95F10015B",
-        "SPDXRef-File--README.md-E8A5ED1A75DD8660C70DE0F6C3DBA5154580984F"
+        "SPDXRef-File--generate-sbom.yml-D25F1F6D90C4B31070CAE1044CDAAD24ACAA2FC6"
       ]
     }
   ],
@@ -179,9 +179,9 @@
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "glennmusa-sbom-on-pull-request 0.0.1",
-  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8527/QnIj45wTYEW_3KHAoVrKLg",
+  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8528/PNn0B8FM4k6Dq-KpIM8YPg",
   "creationInfo": {
-    "created": "2022-02-17T20:27:55Z",
+    "created": "2022-02-17T20:33:52Z",
     "creators": [
       "Organization: Microsoft",
       "Tool: Microsoft.SBOMTool-2.1.14"
