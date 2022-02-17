@@ -1,25 +1,6 @@
 {
   "files": [
     {
-      "fileName": "./README.md",
-      "SPDXID": "SPDXRef-File--README.md-E8A5ED1A75DD8660C70DE0F6C3DBA5154580984F",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "f861dd321be4962224a8bc1df425e3fed5ee2d54b45e835a8147d0d6976e350c"
-        },
-        {
-          "algorithm": "SHA1",
-          "checksumValue": "e8a5ed1a75dd8660c70de0f6c3dba5154580984f"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "licenseInfoInFiles": [
-        "NOASSERTION"
-      ],
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./LICENSE",
       "SPDXID": "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899",
       "checksums": [
@@ -30,6 +11,25 @@
         {
           "algorithm": "SHA1",
           "checksumValue": "d80a036dccb974a02e52b637557aeee8786fb899"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./README.md",
+      "SPDXID": "SPDXRef-File--README.md-AB12B269EEA341BE2212C850A69A54E8E3500909",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2de0221d44b13947eb30dc06a5822d0d06e6aedc7ecadb0ac6d5bfd0d18a9717"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "ab12b269eea341be2212c850a69a54e8e3500909"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -97,15 +97,15 @@
     },
     {
       "fileName": "./generate-sbom.yml",
-      "SPDXID": "SPDXRef-File--generate-sbom.yml-D336A9C3CFFD982696830F81441C01B1BF6913D9",
+      "SPDXID": "SPDXRef-File--generate-sbom.yml-4D5D72EA2081E723C3D15D9FC736A382FE681D2D",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ce3b591c0825981780b4952b6be89cbc54963abafe4fc06cce349e17d7802342"
+          "checksumValue": "17f1a5be27e93c3f93011189496ed3002b3270c38b1f9a8f6aceb4fee9d4ac27"
         },
         {
           "algorithm": "SHA1",
-          "checksumValue": "d336a9c3cffd982696830f81441c01b1bf6913d9"
+          "checksumValue": "4d5d72ea2081e723c3d15d9fc736a382fe681d2d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -142,7 +142,7 @@
       "SPDXID": "SPDXRef-RootPackage",
       "downloadLocation": "NOASSERTION",
       "packageVerificationCode": {
-        "packageVerificationCodeValue": "604c165dc30ae54945febf2fd01a0046ca069092"
+        "packageVerificationCodeValue": "9d56a3ac9400dc4b651c207dcee7bd1016b6e32b"
       },
       "filesAnalyzed": true,
       "licenseConcluded": "NOASSERTION",
@@ -154,34 +154,34 @@
       "versionInfo": "0.0.1",
       "supplier": "Organization: Microsoft",
       "hasFiles": [
-        "SPDXRef-File--generate-sbom.yml-D336A9C3CFFD982696830F81441C01B1BF6913D9",
-        "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
-        "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899",
         "SPDXRef-File--azure-pipelines.yml-EA474BC52D69C596A2F8E04332CF2B4A830B48D5",
         "SPDXRef-File--scratch.sh-AAC11151E1A914674FDFC419D47268F95F10015B",
-        "SPDXRef-File--README.md-E8A5ED1A75DD8660C70DE0F6C3DBA5154580984F"
+        "SPDXRef-File--README.md-AB12B269EEA341BE2212C850A69A54E8E3500909",
+        "SPDXRef-File--generate-sbom.yml-4D5D72EA2081E723C3D15D9FC736A382FE681D2D",
+        "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
+        "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899"
       ]
     }
   ],
   "relationships": [
     {
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-RootPackage",
-      "spdxElementId": "SPDXRef-DOCUMENT"
-    },
-    {
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "Azure-Pipelines-Hosted-Image-ubuntu20-20220213.1",
       "spdxElementId": "SPDXRef-RootPackage"
+    },
+    {
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-RootPackage",
+      "spdxElementId": "SPDXRef-DOCUMENT"
     }
   ],
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "glennmusa-sbom-on-pull-request 0.0.1",
-  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8527/QnIj45wTYEW_3KHAoVrKLg",
+  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8537/-Wxwh_D8lU-emL25ZicGpg",
   "creationInfo": {
-    "created": "2022-02-17T20:27:55Z",
+    "created": "2022-02-17T20:52:30Z",
     "creators": [
       "Organization: Microsoft",
       "Tool: Microsoft.SBOMTool-2.1.14"
