@@ -58,7 +58,7 @@ jobs:
     displayName: 'Exit with success if only the SBOM has changed'
 
   - bash: |
-      exit 0 # for now
+      exit 0
       cd $(Build.SourcesDirectory)
       rm -rf _manifest
     displayName: 'Remove previous _manifest contents'
