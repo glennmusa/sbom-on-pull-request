@@ -39,25 +39,6 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./scratch.sh",
-      "SPDXID": "SPDXRef-File--scratch.sh-E16CC1F532FE3E791B4505C4976C1C2269006570",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "6c9f2e9408b6c39870144a4bb0c4e57c21d74e6501e9e814d3ebbe17d571ecc5"
-        },
-        {
-          "algorithm": "SHA1",
-          "checksumValue": "e16cc1f532fe3e791b4505c4976c1c2269006570"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "licenseInfoInFiles": [
-        "NOASSERTION"
-      ],
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./.gitignore",
       "SPDXID": "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
       "checksums": [
@@ -68,6 +49,25 @@
         {
           "algorithm": "SHA1",
           "checksumValue": "7c7c92f87cbbad24b6a64b191257eae0d82e6597"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./scratch.sh",
+      "SPDXID": "SPDXRef-File--scratch.sh-E16CC1F532FE3E791B4505C4976C1C2269006570",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6c9f2e9408b6c39870144a4bb0c4e57c21d74e6501e9e814d3ebbe17d571ecc5"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "e16cc1f532fe3e791b4505c4976c1c2269006570"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -154,12 +154,12 @@
       "versionInfo": "0.0.1",
       "supplier": "Organization: Microsoft",
       "hasFiles": [
-        "SPDXRef-File--generate-sbom.yml-F2BD444C82402CCA512AC322F95C0349AB9B5F1C",
         "SPDXRef-File--azure-pipelines.yml-EA474BC52D69C596A2F8E04332CF2B4A830B48D5",
         "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
+        "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899",
+        "SPDXRef-File--generate-sbom.yml-F2BD444C82402CCA512AC322F95C0349AB9B5F1C",
         "SPDXRef-File--scratch.sh-E16CC1F532FE3E791B4505C4976C1C2269006570",
-        "SPDXRef-File--README.md-28B3DF1C2F3AC2280D932699586AC73B57763350",
-        "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899"
+        "SPDXRef-File--README.md-28B3DF1C2F3AC2280D932699586AC73B57763350"
       ]
     }
   ],
@@ -179,9 +179,9 @@
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "glennmusa-sbom-on-pull-request 0.0.1",
-  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8491/5Pz7cYza5kSQQ8yaI9BkKA",
+  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8492/lheDRcfoRkK7WxkOcioyng",
   "creationInfo": {
-    "created": "2022-02-17T19:01:54Z",
+    "created": "2022-02-17T19:02:56Z",
     "creators": [
       "Organization: Microsoft",
       "Tool: Microsoft.SBOMTool-2.1.14"
