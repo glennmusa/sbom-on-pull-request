@@ -27,7 +27,7 @@ jobs:
         _manifest/spdx_2.2/manifest.spdx.json.sha256
       )
 
-      the_last_diff=( $(git diff --name-only --pretty="" HEAD~1 HEAD) )
+      the_last_diff=( $(git diff --name-only --pretty="" HEAD) )
 
       echo "only manifest files:"
       echo ${only_manifest_files[*]}
