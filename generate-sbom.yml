@@ -42,32 +42,48 @@ jobs:
         _manifest/spdx_2.2/manifest.spdx.json.sha256
       )
 
+      the_last_show=( $(git show --name-only --pretty="" HEAD) )
+      the_last_log=( $(git log --max-count=1 --oneline --name-only --pretty="") )
       the_last_diff=( $(git diff --name-only --pretty="" HEAD HEAD~1) )
 
       echo "only manifest files:"
       echo ${only_manifest_files[*]}
       echo ""
-      echo "the last diff:"
-      echo ${last_diff[*]}
+
+      echo "the last git show:"
+      echo ${the_last_show[*]}
       echo ""
 
-      if [[ "${the_last_diff[*]}" == "${only_manifest_files[*]}" ]]; then
-          echo "These changes are just the manifest files. Exiting code 0."
-          exit 0
-      fi
-    displayName: 'Exit with success if only the SBOM has changed'
+      echo "the last git log:"
+      echo ${the_last_log[*]}
+      echo ""
 
-  - bash: |
-      exit 0
-      cd $(Build.SourcesDirectory)
-      rm -rf _manifest
-    displayName: 'Remove previous _manifest contents'
+      echo "the last git diff:"
+      echo ${the_last_diff[*]}
+      echo ""
+
+      BUILD_SBOM=true
+
+      if [[ "${the_last_diff[*]}" == "${only_manifest_files[*]}" ]]; then
+          BUILD_SBOM=false
+          echo "These changes are just the manifest files."
+      fi
+
+      echo "##vso[task.setvariable variable=BUILD_SBOM;]$BUILD_SBOM"
+    displayName: 'Determine if SBOM needs to be built'
+
+  # - bash: |
+  #     cd $(Build.SourcesDirectory)
+  #     rm -rf _manifest
+  #   displayName: 'Remove previous _manifest contents'
+  #   condition: eq($(BUILD_SBOM), true)
 
   - bash: |
       cd $(Build.SourcesDirectory)
       cp -r .git $(Build.ArtifactStagingDirectory)
       rm -rf .git
     displayName: 'Temporarily move .git so it is not a part of the SBOM'
+    condition: eq($(BUILD_SBOM), true)
 
   - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
     displayName: 'Generate SBOM'
@@ -77,6 +93,7 @@ jobs:
       PackageName: 'glennmusa-sbom-on-pull-request'
       PackageVersion: 0.0.1
       Verbosity: Verbose
+    condition: eq($(BUILD_SBOM), true)
 
   - bash: |
       cd $(Build.SourcesDirectory)
@@ -87,12 +104,14 @@ jobs:
         && mv temp.json _manifest/spdx_2.2/manifest.spdx.json \
         && rm -f temp.json
     displayName: 'Pretty Print SBOM'
+    condition: eq($(BUILD_SBOM), true)
 
   - bash: |
       cd $(Build.ArtifactStagingDirectory)
       cp -r .git $(Build.SourcesDirectory)
       rm -rf .git
     displayName: 'Restore .git so we can commit back to the source branch'
+    condition: eq($(BUILD_SBOM), true)
 
   - bash: |
       git config --global user.email "$BUILD_REQUESTEDFOREMAIL"
@@ -103,6 +122,7 @@ jobs:
       git commit -m "Update Software Bill of Materials (SBOM)"
       git push --set-upstream origin HEAD:$(SOURCE_BRANCH)
     displayName: 'Commit SBOM changes back to source branch'
+    condition: eq($(BUILD_SBOM), true)
 
   - task: PublishBuildArtifacts@1
     displayName: 'Publish SBOM as Build Artifact'
@@ -110,3 +130,4 @@ jobs:
       PathtoPublish: '$(Build.SourcesDirectory)/_manifest'
       ArtifactName: 'drop'
       publishLocation: 'Container'
+    condition: eq($(BUILD_SBOM), true)
