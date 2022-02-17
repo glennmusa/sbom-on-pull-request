@@ -31,10 +31,10 @@
       "Sha256Hash": "B82EF38CCBC40DCAADF4CE13B96CD41AFBC4907F14A847AF266508839B78D76E"
     }
   ],
-  "CloudBuildId": "8532",
+  "CloudBuildId": "8535",
   "Repo": "https://github.com/glennmusa/sbom-on-pull-request",
   "Branch": "merge",
-  "CommitId": "a3a38b8eff347dcbcabeba4614e5a9b27d7c7cc7",
+  "CommitId": "a2d55248744a75aea42283bc8bd2d0f292aa7d25",
   "Version": "0.0.1",
-  "Timestamp": 1645130637
+  "Timestamp": 1645130815
 }
