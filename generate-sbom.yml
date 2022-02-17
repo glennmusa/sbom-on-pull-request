@@ -14,25 +14,10 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: generateSbom
-  displayName: 'Generate SBOM'
+- job: shouldGenerateSbom
+  displayName: 'Determine if SBOM needs to be generated'
   steps:
   - checkout: self
-    persistCredentials: true
-
-  # - bash: |
-  #     if [[ "$(Build.Reason)" == "Manual" ]]; then
-  #       SOURCE_BRANCH=$(Build.SourceBranch)
-  #     elif [[ "$(Build.Reason)" == "PullRequest" ]]; then
-  #       SOURCE_BRANCH=$(System.PullRequest.SourceBranch)
-  #     else
-  #       echo "This pipeline can only be invoked manually or on PR."
-  #       echo "Exiting."
-  #       exit 1
-  #     fi
-  #     echo "The source branch is $SOURCE_BRANCH"
-  #     echo "##vso[task.setvariable variable=SOURCE_BRANCH;]$SOURCE_BRANCH"
-  #   displayName: 'Determine the branch name'
 
   - bash: |
       only_manifest_files=(
@@ -74,18 +59,38 @@ jobs:
     name: determineSbom
     displayName: 'Determine if SBOM needs to be built'
 
+- job: generateSbom
+  dependsOn: shouldGenerateSbom
+  condition: eq(dependencies.shouldGenerateSbom.outputs['determineSbom.BUILD_SBOM'], 'true')
+  displayName: 'Generate SBOM'
+  steps:
+  - checkout: self
+    persistCredentials: true
+
+  # - bash: |
+  #     if [[ "$(Build.Reason)" == "Manual" ]]; then
+  #       SOURCE_BRANCH=$(Build.SourceBranch)
+  #     elif [[ "$(Build.Reason)" == "PullRequest" ]]; then
+  #       SOURCE_BRANCH=$(System.PullRequest.SourceBranch)
+  #     else
+  #       echo "This pipeline can only be invoked manually or on PR."
+  #       echo "Exiting."
+  #       exit 1
+  #     fi
+  #     echo "The source branch is $SOURCE_BRANCH"
+  #     echo "##vso[task.setvariable variable=SOURCE_BRANCH;]$SOURCE_BRANCH"
+  #   displayName: 'Determine the branch name'
+
   # - bash: |
   #     cd $(Build.SourcesDirectory)
   #     rm -rf _manifest
   #   displayName: 'Remove previous _manifest contents'
-  #   condition: eq($(BUILD_SBOM), true)
 
   - bash: |
       cd $(Build.SourcesDirectory)
       cp -r .git $(Build.ArtifactStagingDirectory)
       rm -rf .git
     displayName: 'Temporarily move .git so it is not a part of the SBOM'
-    condition: eq(dependencies.generateSbom.outputs['determineSbom.BUILD_SBOM'], 'true')
 
   - task: AzureArtifacts.manifest-generator-task.manifest-generator-task.ManifestGeneratorTask@0
     displayName: 'Generate SBOM'
@@ -95,7 +100,6 @@ jobs:
       PackageName: 'glennmusa-sbom-on-pull-request'
       PackageVersion: 0.0.1
       Verbosity: Verbose
-    condition: eq(dependencies.generateSbom.outputs['determineSbom.BUILD_SBOM'], 'true')
 
   - bash: |
       cd $(Build.SourcesDirectory)
@@ -106,14 +110,12 @@ jobs:
         && mv temp.json _manifest/spdx_2.2/manifest.spdx.json \
         && rm -f temp.json
     displayName: 'Pretty Print SBOM'
-    condition: eq(dependencies.generateSbom.outputs['determineSbom.BUILD_SBOM'], 'true')
 
   - bash: |
       cd $(Build.ArtifactStagingDirectory)
       cp -r .git $(Build.SourcesDirectory)
       rm -rf .git
     displayName: 'Restore .git so we can commit back to the source branch'
-    condition: eq(dependencies.generateSbom.outputs['determineSbom.BUILD_SBOM'], 'true')
 
   - bash: |
       git config --global user.email "$BUILD_REQUESTEDFOREMAIL"
@@ -124,7 +126,6 @@ jobs:
       git commit -m "Update Software Bill of Materials (SBOM)"
       git push --set-upstream origin HEAD:$(SOURCE_BRANCH)
     displayName: 'Commit SBOM changes back to source branch'
-    condition: eq(dependencies.generateSbom.outputs['determineSbom.BUILD_SBOM'], 'true')
 
   - task: PublishBuildArtifacts@1
     displayName: 'Publish SBOM as Build Artifact'
@@ -132,4 +133,3 @@ jobs:
       PathtoPublish: '$(Build.SourcesDirectory)/_manifest'
       ArtifactName: 'drop'
       publishLocation: 'Container'
-    condition: eq(dependencies.generateSbom.outputs['determineSbom.BUILD_SBOM'], 'true')
