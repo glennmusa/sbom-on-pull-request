@@ -39,25 +39,6 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./scratch.sh",
-      "SPDXID": "SPDXRef-File--scratch.sh-E16CC1F532FE3E791B4505C4976C1C2269006570",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "6c9f2e9408b6c39870144a4bb0c4e57c21d74e6501e9e814d3ebbe17d571ecc5"
-        },
-        {
-          "algorithm": "SHA1",
-          "checksumValue": "e16cc1f532fe3e791b4505c4976c1c2269006570"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "licenseInfoInFiles": [
-        "NOASSERTION"
-      ],
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./.gitignore",
       "SPDXID": "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
       "checksums": [
@@ -68,6 +49,25 @@
         {
           "algorithm": "SHA1",
           "checksumValue": "7c7c92f87cbbad24b6a64b191257eae0d82e6597"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./scratch.sh",
+      "SPDXID": "SPDXRef-File--scratch.sh-E16CC1F532FE3E791B4505C4976C1C2269006570",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6c9f2e9408b6c39870144a4bb0c4e57c21d74e6501e9e814d3ebbe17d571ecc5"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "e16cc1f532fe3e791b4505c4976c1c2269006570"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -165,23 +165,23 @@
   ],
   "relationships": [
     {
-      "relationshipType": "DESCRIBES",
-      "relatedSpdxElement": "SPDXRef-RootPackage",
-      "spdxElementId": "SPDXRef-DOCUMENT"
-    },
-    {
       "relationshipType": "DEPENDS_ON",
       "relatedSpdxElement": "Azure-Pipelines-Hosted-Image-ubuntu20-20220213.1",
       "spdxElementId": "SPDXRef-RootPackage"
+    },
+    {
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-RootPackage",
+      "spdxElementId": "SPDXRef-DOCUMENT"
     }
   ],
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "glennmusa-sbom-on-pull-request 0.0.1",
-  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8486/VVehztqfIk2-f0alULP69Q",
+  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8487/DDgFx66AckyURgXC4Q3K2w",
   "creationInfo": {
-    "created": "2022-02-17T18:56:38Z",
+    "created": "2022-02-17T18:57:34Z",
     "creators": [
       "Organization: Microsoft",
       "Tool: Microsoft.SBOMTool-2.1.14"
