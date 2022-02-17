@@ -39,25 +39,6 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./.gitignore",
-      "SPDXID": "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9842f442b12e86b03acd67cd83923f4ffa95fb72f546b6c13ef2269d770f57e7"
-        },
-        {
-          "algorithm": "SHA1",
-          "checksumValue": "7c7c92f87cbbad24b6a64b191257eae0d82e6597"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "licenseInfoInFiles": [
-        "NOASSERTION"
-      ],
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./scratch.sh",
       "SPDXID": "SPDXRef-File--scratch.sh-AAC11151E1A914674FDFC419D47268F95F10015B",
       "checksums": [
@@ -68,6 +49,25 @@
         {
           "algorithm": "SHA1",
           "checksumValue": "aac11151e1a914674fdfc419d47268f95f10015b"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./.gitignore",
+      "SPDXID": "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9842f442b12e86b03acd67cd83923f4ffa95fb72f546b6c13ef2269d770f57e7"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "7c7c92f87cbbad24b6a64b191257eae0d82e6597"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -97,15 +97,15 @@
     },
     {
       "fileName": "./generate-sbom.yml",
-      "SPDXID": "SPDXRef-File--generate-sbom.yml-12E895690CDA63432583117B08F42C4ABE25882D",
+      "SPDXID": "SPDXRef-File--generate-sbom.yml-D336A9C3CFFD982696830F81441C01B1BF6913D9",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4fa78d6984f9150302caee61d02974a99a2509754cc7ef092fcb1ebb30372302"
+          "checksumValue": "ce3b591c0825981780b4952b6be89cbc54963abafe4fc06cce349e17d7802342"
         },
         {
           "algorithm": "SHA1",
-          "checksumValue": "12e895690cda63432583117b08f42c4abe25882d"
+          "checksumValue": "d336a9c3cffd982696830f81441c01b1bf6913d9"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -142,7 +142,7 @@
       "SPDXID": "SPDXRef-RootPackage",
       "downloadLocation": "NOASSERTION",
       "packageVerificationCode": {
-        "packageVerificationCodeValue": "7de17e22654b98ba91dd51d69f13b0e744b239e1"
+        "packageVerificationCodeValue": "558d60fbd2e72857caaa1530b5fe4cb06a631c95"
       },
       "filesAnalyzed": true,
       "licenseConcluded": "NOASSERTION",
@@ -154,34 +154,34 @@
       "versionInfo": "0.0.1",
       "supplier": "Organization: Microsoft",
       "hasFiles": [
-        "SPDXRef-File--generate-sbom.yml-12E895690CDA63432583117B08F42C4ABE25882D",
-        "SPDXRef-File--scratch.sh-AAC11151E1A914674FDFC419D47268F95F10015B",
-        "SPDXRef-File--README.md-28B3DF1C2F3AC2280D932699586AC73B57763350",
+        "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899",
+        "SPDXRef-File--generate-sbom.yml-D336A9C3CFFD982696830F81441C01B1BF6913D9",
         "SPDXRef-File--azure-pipelines.yml-EA474BC52D69C596A2F8E04332CF2B4A830B48D5",
         "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
-        "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899"
+        "SPDXRef-File--scratch.sh-AAC11151E1A914674FDFC419D47268F95F10015B",
+        "SPDXRef-File--README.md-28B3DF1C2F3AC2280D932699586AC73B57763350"
       ]
     }
   ],
   "relationships": [
     {
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "Azure-Pipelines-Hosted-Image-ubuntu20-20220213.1",
-      "spdxElementId": "SPDXRef-RootPackage"
-    },
-    {
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-RootPackage",
       "spdxElementId": "SPDXRef-DOCUMENT"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "Azure-Pipelines-Hosted-Image-ubuntu20-20220213.1",
+      "spdxElementId": "SPDXRef-RootPackage"
     }
   ],
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "glennmusa-sbom-on-pull-request 0.0.1",
-  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8512/uA4q1MiA3k6FGY61iE5HgQ",
+  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8523/89cTkblwDkujv_ub_-2BHw",
   "creationInfo": {
-    "created": "2022-02-17T19:25:35Z",
+    "created": "2022-02-17T20:20:25Z",
     "creators": [
       "Organization: Microsoft",
       "Tool: Microsoft.SBOMTool-2.1.14"
