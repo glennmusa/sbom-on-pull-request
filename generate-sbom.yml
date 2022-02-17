@@ -32,7 +32,23 @@ jobs:
       fi
       echo "The source branch is $SOURCE_BRANCH"
       echo "##vso[task.setvariable variable=SOURCE_BRANCH;]$SOURCE_BRANCH"
-    displayName: 'Set the branch name'
+    displayName: 'Determine the branch name'
+
+  - bash: |
+      only_manifest_files=(
+        _manifest/manifest.json
+        _manifest/manifest.json.sha256
+        _manifest/spdx_2.2/manifest.spdx.json
+        _manifest/spdx_2.2/manifest.spdx.json.sha256
+      )
+
+      the_last_diff=( $(git diff --name-only --pretty="" HEAD HEAD~1) )
+
+      if [[ "${the_last_diff[*]}" == "${only_manifest_files[*]}" ]]; then
+          echo "These changes are just the manifest files. Exiting code 0."
+          exit 0
+      fi
+    displayName: 'Exit with success if only the SBOM has changed'
 
   - bash: |
       cd $(Build.SourcesDirectory)
