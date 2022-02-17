@@ -47,7 +47,7 @@ jobs:
       echo ${the_last_diff[*]}
       echo ""
 
-      BUILD_SBOM=false
+      BUILD_SBOM=true
 
       if [[ "${the_last_diff[*]}" == "${only_manifest_files[*]}" ]]; then
           BUILD_SBOM=false
