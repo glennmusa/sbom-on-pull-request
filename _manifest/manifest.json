@@ -3,7 +3,7 @@
     {
       "Source": "/README.md",
       "AzureArtifactsHash": "04232073626F6D2D6F6E2D70756C6C2D726571756573740A47656E65726174652053",
-      "Sha256Hash": "310367517C896008F796F3D9DFA030E6A95999930A12D517C5727202813C2702"
+      "Sha256Hash": "36C50A5BE39168BD97DB916B9E57108612CA325879ED04577DD8ED216821A2B6"
     },
     {
       "Source": "/LICENSE",
@@ -31,10 +31,10 @@
       "Sha256Hash": "BCA5AF8AC5433209CFB657EF28BB4A4CF9B63A27BF74B48E32AC2B05FF8EA921"
     }
   ],
-  "CloudBuildId": "8544",
+  "CloudBuildId": "8547",
   "Repo": "https://github.com/glennmusa/sbom-on-pull-request",
   "Branch": "merge",
-  "CommitId": "c0b741c1b2c1ca5c204938f7fc97ea94264b24ed",
+  "CommitId": "2c22e22af0606ad03500c82e4d71530eacab111c",
   "Version": "0.0.1",
-  "Timestamp": 1645131905
+  "Timestamp": 1645132115
 }
