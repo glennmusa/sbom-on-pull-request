@@ -20,19 +20,19 @@ jobs:
   - checkout: self
     persistCredentials: true
 
-  - bash: |
-      if [[ "$(Build.Reason)" == "Manual" ]]; then
-        SOURCE_BRANCH=$(Build.SourceBranch)
-      elif [[ "$(Build.Reason)" == "PullRequest" ]]; then
-        SOURCE_BRANCH=$(System.PullRequest.SourceBranch)
-      else
-        echo "This pipeline can only be invoked manually or on PR."
-        echo "Exiting."
-        exit 1
-      fi
-      echo "The source branch is $SOURCE_BRANCH"
-      echo "##vso[task.setvariable variable=SOURCE_BRANCH;]$SOURCE_BRANCH"
-    displayName: 'Determine the branch name'
+  # - bash: |
+  #     if [[ "$(Build.Reason)" == "Manual" ]]; then
+  #       SOURCE_BRANCH=$(Build.SourceBranch)
+  #     elif [[ "$(Build.Reason)" == "PullRequest" ]]; then
+  #       SOURCE_BRANCH=$(System.PullRequest.SourceBranch)
+  #     else
+  #       echo "This pipeline can only be invoked manually or on PR."
+  #       echo "Exiting."
+  #       exit 1
+  #     fi
+  #     echo "The source branch is $SOURCE_BRANCH"
+  #     echo "##vso[task.setvariable variable=SOURCE_BRANCH;]$SOURCE_BRANCH"
+  #   displayName: 'Determine the branch name'
 
   - bash: |
       only_manifest_files=(
@@ -42,7 +42,7 @@ jobs:
         _manifest/spdx_2.2/manifest.spdx.json.sha256
       )
 
-      the_last_diff=( $(git diff --name-only --pretty="" HEAD~1 HEAD) )
+      the_last_diff=( $(git diff --name-only --pretty="" HEAD HEAD~1) )
 
       echo "only manifest files:"
       echo ${only_manifest_files[*]}
@@ -58,6 +58,7 @@ jobs:
     displayName: 'Exit with success if only the SBOM has changed'
 
   - bash: |
+      exit 0 # for now
       cd $(Build.SourcesDirectory)
       rm -rf _manifest
     displayName: 'Remove previous _manifest contents'
