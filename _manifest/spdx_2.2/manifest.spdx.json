@@ -39,25 +39,6 @@
       "copyrightText": "NOASSERTION"
     },
     {
-      "fileName": "./scratch.sh",
-      "SPDXID": "SPDXRef-File--scratch.sh-D6863F27E21EFD0ADD5DA4555D2F98D98AA051FE",
-      "checksums": [
-        {
-          "algorithm": "SHA256",
-          "checksumValue": "9fc754ad27451d873f2bdf579c8c9488bc25f193786753543bf9841a93fa9102"
-        },
-        {
-          "algorithm": "SHA1",
-          "checksumValue": "d6863f27e21efd0add5da4555d2f98d98aa051fe"
-        }
-      ],
-      "licenseConcluded": "NOASSERTION",
-      "licenseInfoInFiles": [
-        "NOASSERTION"
-      ],
-      "copyrightText": "NOASSERTION"
-    },
-    {
       "fileName": "./.gitignore",
       "SPDXID": "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
       "checksums": [
@@ -68,6 +49,25 @@
         {
           "algorithm": "SHA1",
           "checksumValue": "7c7c92f87cbbad24b6a64b191257eae0d82e6597"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "licenseInfoInFiles": [
+        "NOASSERTION"
+      ],
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": "./scratch.sh",
+      "SPDXID": "SPDXRef-File--scratch.sh-AAC11151E1A914674FDFC419D47268F95F10015B",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "57ed262dffa2a338d27df975c21ab98d3071d76d072723dce12c2839dc729e26"
+        },
+        {
+          "algorithm": "SHA1",
+          "checksumValue": "aac11151e1a914674fdfc419d47268f95f10015b"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -97,15 +97,15 @@
     },
     {
       "fileName": "./generate-sbom.yml",
-      "SPDXID": "SPDXRef-File--generate-sbom.yml-6A1F66D18BB177849A2BC8782727305A9A1083E1",
+      "SPDXID": "SPDXRef-File--generate-sbom.yml-12E895690CDA63432583117B08F42C4ABE25882D",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "7b875dc5d750dcd87077dd00601bfff40a17955f7c5e624d98d384036987aec9"
+          "checksumValue": "4fa78d6984f9150302caee61d02974a99a2509754cc7ef092fcb1ebb30372302"
         },
         {
           "algorithm": "SHA1",
-          "checksumValue": "6a1f66d18bb177849a2bc8782727305a9a1083e1"
+          "checksumValue": "12e895690cda63432583117b08f42c4abe25882d"
         }
       ],
       "licenseConcluded": "NOASSERTION",
@@ -142,7 +142,7 @@
       "SPDXID": "SPDXRef-RootPackage",
       "downloadLocation": "NOASSERTION",
       "packageVerificationCode": {
-        "packageVerificationCodeValue": "4567f8a9dc62d378f98a20da040774a7b8c3b475"
+        "packageVerificationCodeValue": "7de17e22654b98ba91dd51d69f13b0e744b239e1"
       },
       "filesAnalyzed": true,
       "licenseConcluded": "NOASSERTION",
@@ -157,31 +157,31 @@
         "SPDXRef-File--azure-pipelines.yml-EA474BC52D69C596A2F8E04332CF2B4A830B48D5",
         "SPDXRef-File--.gitignore-7C7C92F87CBBAD24B6A64B191257EAE0D82E6597",
         "SPDXRef-File--README.md-28B3DF1C2F3AC2280D932699586AC73B57763350",
-        "SPDXRef-File--generate-sbom.yml-6A1F66D18BB177849A2BC8782727305A9A1083E1",
-        "SPDXRef-File--scratch.sh-D6863F27E21EFD0ADD5DA4555D2F98D98AA051FE",
+        "SPDXRef-File--generate-sbom.yml-12E895690CDA63432583117B08F42C4ABE25882D",
+        "SPDXRef-File--scratch.sh-AAC11151E1A914674FDFC419D47268F95F10015B",
         "SPDXRef-File--LICENSE-D80A036DCCB974A02E52B637557AEEE8786FB899"
       ]
     }
   ],
   "relationships": [
     {
-      "relationshipType": "DEPENDS_ON",
-      "relatedSpdxElement": "Azure-Pipelines-Hosted-Image-ubuntu20-20220213.1",
-      "spdxElementId": "SPDXRef-RootPackage"
-    },
-    {
       "relationshipType": "DESCRIBES",
       "relatedSpdxElement": "SPDXRef-RootPackage",
       "spdxElementId": "SPDXRef-DOCUMENT"
+    },
+    {
+      "relationshipType": "DEPENDS_ON",
+      "relatedSpdxElement": "Azure-Pipelines-Hosted-Image-ubuntu20-20220213.1",
+      "spdxElementId": "SPDXRef-RootPackage"
     }
   ],
   "spdxVersion": "SPDX-2.2",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
   "name": "glennmusa-sbom-on-pull-request 0.0.1",
-  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8502/QwhZ-A-bx0KEqtJnIhdGsw",
+  "documentNamespace": "https://sbom.microsoft/1:I5vpEMl9wkCCZsmqQqtQDQ:MIGbmOPODUWjMVCPbweVOQ/206:8504/q6bGLMBaFU2soCOnURalTw",
   "creationInfo": {
-    "created": "2022-02-17T19:13:41Z",
+    "created": "2022-02-17T19:17:52Z",
     "creators": [
       "Organization: Microsoft",
       "Tool: Microsoft.SBOMTool-2.1.14"
