@@ -9,6 +9,9 @@ only_manifest_files=(
 
 last_diff=( $(git diff --name-only --pretty="" HEAD HEAD~1) )
 
+echo ${only_manifest_files[*]}
+echo ${last_diff[*]}
+
 if [[ "${last_diff[*]}" == "${only_manifest_files[*]}" ]]; then
     echo "These changes are just the manifest files. Exiting code 0."
     exit 0
